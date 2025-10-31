@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Brampton Short Film-Fest (official site)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Vamsi Kurli" />
+    <meta name="description" content="VK Creatives (official website)" />
+    <meta name="keywords" content="HTML,CSS,Feature film, film festival" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="Stylesheet/stylesheet2.css" rel="stylesheet" type="text/css" />
+    <link href="Stylesheet/mobile-fixes.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster" />
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("mnav");
+            nav.classList.toggle("expanded");
+            console.log("Menu toggled");
+        }
+
+        // Ensure the script runs after the page loads
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Page loaded");
+            var hamburger = document.querySelector(".hamburger");
+            if (hamburger) {
+                hamburger.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    toggleMenu();
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="indexContainer">
+        <div class="Header1 mobileView">
+            <div class="Header1-top">
+                <img class="mainlogo" alt="" src="Images/Logo 3.2.png" width="200" height="100" />
+                <!--        <p class="mainslogan">Brampton Short Film-Fest</p>-->
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+
+            <nav id="mnav" class="Header1 Nav mobilenav">
+                <div class="programicons"><a href="index.html">Home</a></div>
+                <div class="programicons"><a href="Film Collection.html">Film Collection</a></div>
+                <div class="programicons"><a href="About.html">About Us</a></div>
+                <div class="programicons"><a href="Submit.html">Submit</a></div>
+                <div class="programicons"><a href="Contact.html">Contact Us</a></div>
+            </nav>
+        </div>
+
+        <div>
+            <p class="filmtitles">The Taste of Greed</p>
+        </div>
+
+        <div class="promotionalvideo">
+            <iframe id="SIBIMLfilm" width="420" height="315"
+                src="https://www.youtube.com/embed/tfjH4ZZyT2Q?si=uD3SoRsw_jkhDHOz"></iframe>
+            </iframe>
+        </div>
+
+        <div class="pagecontainer">
+            <div class="postercontainer">
+                <div>
+                    <img class="movieposters" src="Images/Film Poster/Drama/The Taste of Greed.png" width="400"
+                        height="900">
+                </div>
+
+                <div class="countrycontainer">
+                    <p class="countrytitle">Country</p>
+                    <p class="countryname"><span style="color:red">USA</span></p>
+
+                    <p class="countrytitle">Category</p>
+                    <p class="countryname"><span style="color:red">Foreign/Drama</span></p>
+
+                    <p class="countrytitle">Release Year</p>
+                    <p class="countryname"><span style="color:red">2025</span></p>
+
+                    <p class="countrytitle">Director</p>
+                    <p class="countryname"><span style="color:red">Senthooran Ramanathan</span></p>
+
+                    <p class="countrytitle">Run-time</p>
+                    <p class="countryname"><span style="color:red">17:19 mins</span></p>
+                </div>
+
+                <div class="creditscontainer">
+                    <p class="countrytitle">Writers</p>
+                    <p class="countryname"><span style="color:red">Senthooran Ramanathan</span></p>
+
+                    <p class="countrytitle">Producers</p>
+                    <p class="countryname"><span style="color:red">Senthooran Ramanathan</span></p>
+
+                    <p class="countrytitle">Editor</p>
+                    <p class="countryname"><span style="color:red">Mohammad Ali</span></p>
+
+                    <p class="countrytitle">Director of Photography</p>
+                    <p class="countryname"><span style="color:red">Mohammad Ali</span></p>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="synopsiscontainer">
+                <h4 class="synopsisheader">Synopsis</h4>
+                <p id="whatsynopsis">After the death of her disabled mother, Sage — a guarded woman haunted by hardship
+                    — clings to a mysterious dream: she will marry a man who will die and leave her wealthy. When she
+                    meets Shawn, a quiet and emotionally closed-off loner who appears well-off, she becomes convinced he
+                    is her fated path to fortune. Determined, she proposes to him — but he refuses. Over time, her
+                    persistence and vulnerability break through his defenses, and in a surprising turn, he proposes to
+                    her.
+
+                    Sage marries him, certain her dream is coming true. But after their quiet union, she discovers a
+                    devastating truth: Shawn has no inheritance. His wealth is either exaggerated or inaccessible — a
+                    life far from the riches she imagined. Disillusioned and emotionally trapped, Sage spirals into
+                    regret, questioning whether love, fate, or greed led her there.
+
+                    The Taste of Greed is a psychological drama about misguided ambition, emotional manipulation, and
+                    the tragic cost of believing in illusions.</p>
+            </div>

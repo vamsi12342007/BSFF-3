@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Brampton Short Film-Fest (official site)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Vamsi Kurli" />
+    <meta name="description" content="VK Creatives (official website)" />
+    <meta name="keywords" content="HTML,CSS,Feature film, film festival" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="Stylesheet/stylesheet2.css" rel="stylesheet" type="text/css" />
+    <link href="Stylesheet/mobile-fixes.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster" />
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("mnav");
+            nav.classList.toggle("expanded");
+            console.log("Menu toggled");
+        }
+
+        // Ensure the script runs after the page loads
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Page loaded");
+            var hamburger = document.querySelector(".hamburger");
+            if (hamburger) {
+                hamburger.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    toggleMenu();
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="indexContainer">
+        <div class="Header1 mobileView">
+            <div class="Header1-top">
+                <img class="mainlogo" alt="" src="Images/Logo 3.2.png" width="200" height="100" />
+                <!--        <p class="mainslogan">Brampton Short Film-Fest</p>-->
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+
+            <nav id="mnav" class="Header1 Nav mobilenav">
+                <div class="programicons"><a href="index.html">Home</a></div>
+                <div class="programicons"><a href="Film Collection.html">Film Collection</a></div>
+                <div class="programicons"><a href="About.html">About Us</a></div>
+                <div class="programicons"><a href="Submit.html">Submit</a></div>
+                <div class="programicons"><a href="Contact.html">Contact Us</a></div>
+            </nav>
+        </div>
+
+        <div>
+            <p class="filmtitles">Biryanee</p>
+        </div>
+
+        <div class="promotionalvideo">
+            <iframe id="SIBIMLfilm" width="420" height="315"
+                src="https://www.youtube.com/embed/6kvXVVtSWrc?si=YRf0AZ754e_LzrU6"></iframe>
+            </iframe>
+        </div>
+
+        <div class="pagecontainer">
+            <div class="postercontainer">
+                <div>
+                    <img class="movieposters" src="Images/Film Poster/Foreign Films/Biryanee.png" width="400"
+                        height="900">
+                </div>
+
+                <div class="countrycontainer">
+                    <p class="countrytitle">Country</p>
+                    <p class="countryname"><span style="color:red">USA</span></p>
+
+                    <p class="countrytitle">Category</p>
+                    <p class="countryname"><span style="color:red">Foreign</span></p>
+
+                    <p class="countrytitle">Release Year</p>
+                    <p class="countryname"><span style="color:red">2025</span></p>
+
+                    <p class="countrytitle">Director</p>
+                    <p class="countryname"><span style="color:red">Prafulla Kharkar</span></p>
+
+                    <p class="countrytitle">Run-time</p>
+                    <p class="countryname"><span style="color:red">19:38 mins</span></p>
+                </div>
+
+                <div class="creditscontainer">
+                    <p class="countrytitle">Writers</p>
+                    <p class="countryname"><span style="color:red">Prafulla Kharkar</span></p>
+
+                    <p class="countrytitle">Producers</p>
+                    <p class="countryname"><span style="color:red">Athavra Kharkar</span></p>
+
+                    <p class="countrytitle">Editor</p>
+                    <p class="countryname"><span style="color:red">Rohaan Pattil</span></p>
+
+                    <p class="countrytitle">Director of Photography</p>
+                    <p class="countryname"><span style="color:red">Kshiteer Sumant</span></p>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="synopsiscontainer">
+                <h4 class="synopsisheader">Synopsis</h4>
+                <p id="whatsynopsis">“Biryanee” is the journey of a heart that loses everything — battles the enemy
+                    within — attachment — and discovers that true love isn’t in holding on to what’s gone, but in
+                    becoming light for others lost in the same darkness. It’s a story based on true events where
+                    sometimes inspiration comes from the worst loss of the life to deliver a message of positivity.</p>
+            </div>
