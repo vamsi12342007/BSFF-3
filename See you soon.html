@@ -15,7 +15,15 @@
   <link href="Stylesheet/stylesheet2.css" rel="stylesheet" type="text/css" />
   <link href="Stylesheet/mobile-fixes.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster" />
-
+  <script src="database.js"></script>
+  <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+      import { getFirestore, doc, getDocs, setDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js';
+      app = initializeApp(firebaseConfig);
+      db = getFirestore(app);
+      setUpFns("drama", getDocs, doc, updateDoc, setDoc, false);
+  </script>
+  <script src="addcomment.js" type="text/javascript"></script>
   <script>
     function toggleMenu() {
       var nav = document.getElementById("mnav");
@@ -33,6 +41,7 @@
           toggleMenu();
         });
       }
+      getCommentsAndLikes();
     });
   </script>
 </head>
@@ -49,8 +58,7 @@
       </div>
 
 
-
-      <nav id="mnav" class="Header1 Nav mobilenav">
+     <nav id="mnav" class="Header1 Nav mobilenav">
         <div class="programicons"><a href="index.html">Home</a></div>
         <div class="programicons"><a href="Film Collection.html">Film Collection</a></div>
          <div class="programicons"><a href="Selected films.html">2025 Official Selection</a></div>
@@ -62,12 +70,6 @@
 
     <div>
       <p class="filmtitles">See you soon</p>
-    </div>
-
-    <div class="promotionalvideo">
-      <iframe id="SIBIMLfilm" width="420" height="315"
-        src="https://www.youtube.com/embed/An1zBJ5K3gI?si=Kyu8HWgyk5xcvy4L"></iframe>
-      </iframe>
     </div>
 
     <div class="pagecontainer">
@@ -113,3 +115,60 @@
       <h4 class="synopsisheader">Synopsis</h4>
       <p id="whatsynopsis">When a job goes wrong, a man calls his wife for one final chance to talk to his infant daughter.</p>
     </div>
+  </div>
+
+      <div class="promotionalvideo">
+      <iframe id="SIBIMLfilm" width="420" height="315"
+        src="https://www.youtube.com/embed/An1zBJ5K3gI?si=Kyu8HWgyk5xcvy4L"></iframe>
+      </iframe>
+    </div>
+    <div class="commentsareawrapper">
+        <div class="likesFeatureWrapper">
+            <i onclick="handlelikebutton(event)" id="drama9" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+            <span style="float: right;" id="iddrama9likes">0 likes</span>
+        </div>
+        <comment-component class="addCommentsForm" id="drama9comment"></comment-component>
+        <div class="commentsSection">
+            <h4 class="marginlessP"><span onclick="toggleComments()" class="commentsExpander">Show Comments</span></h4>
+            <div id="commentsContainer" style="display: none;"></div>
+        </div>
+    </div>
+</body>
+
+ <footer class="footer">
+      <div class="contactContainer">
+        <!--          <img-->
+        <!--            class="footericons"-->
+        <!--            src="Images/Nav Icons/Email Icon.png"-->
+        <!--            alt="email icon"-->
+        <!--            width="40"-->
+        <!--            height="30"-->
+        <!--          />-->
+        <p>bramptonshortfilmfest@gmail.com</p>
+      </div>
+      <div class="contactContainer">
+        <!--          <img-->
+        <!--            class="footericons"-->
+        <!--            src="Images/Nav Icons/telephone_1104586.png"-->
+        <!--            alt="telephone icon"-->
+        <!--            width="40"-->
+        <!--            height="30"-->
+        <!--          />-->
+      </div>
+      <div class="contactContainer">
+        <!--          <img-->
+        <!--            class="footericons"-->
+        <!--            src="Images/Nav Icons/world-wide-web.png"-->
+        <!--            alt="web icon"-->
+        <!--            width="40"-->
+        <!--            height="30"-->
+        <!--          />-->
+        <p>bramptonshortfilm-fest.com</p>
+      </div>
+      <i>
+        <p>Short in Length, Long in Impact.</p>
+      </i>
+      <p>&copy; 2025 Brampton Film-Fest (Official Site)</p>
+    </footer>
+    </body>
+

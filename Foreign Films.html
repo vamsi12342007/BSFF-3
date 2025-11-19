@@ -61,7 +61,8 @@
   app = initializeApp(firebaseConfig);
   db = getFirestore(app);
   moviesCol = collection(db, 'movies');
-  setUpFns("foreign", 4, getDocs, doc, updateDoc, setDoc);
+  count = 9;
+  setUpFns("foreign", getDocs, doc, updateDoc, setDoc);
 </script>
 
 <body>
@@ -76,11 +77,10 @@
       </div>
 
 
-     
       <nav id="mnav" class="Header1 Nav mobilenav">
         <div class="programicons"><a href="index.html">Home</a></div>
         <div class="programicons"><a href="Film Collection.html">Film Collection</a></div>
-         <div class="programicons"><a href="Selected films.html">2025 Official Selection</a></div>
+        <div class="programicons"><a href="Selected films.html">2025 Official Selection</a></div>
         <div class="programicons"><a href="About.html">About Us</a></div>
         <div class="programicons"><a href="Submit.html">Submit</a></div>
         <div class="programicons"><a href="Contact.html">Contact Us</a></div>
@@ -117,39 +117,34 @@
         <span style="float: right;" id="idforeign4likes">0 likes</span>
       </div>
       <div>
+        <a href="Alakananda tu, main bhagirathi.html"> <img class="filmposters"
+            src="Images/Film Poster/Foreign Films/Alakananda tu, main bhagirathi.png" width="200" height="150"></a>
+        <i id="foreign5" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="idforeign5likes">0 likes</span>
+      </div>
+      <div>
         <a href="Biryanee.html"> <img class="filmposters" src="Images/Film Poster/Foreign Films/Biryanee.png"
             width="200" height="150"></a>
-        <i id="foreign4" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-        <span style="float: right;" id="idforeign4likes">0 likes</span>
-      </div>
-      <div>
-        <a href="Before They Forget.html"> <img class="filmposters"
-            src="Images/Film Poster/Foreign Films/Before They Forget.png" width="200" height="150"></a>
-        <i id="foreign5" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-        <span style="float: right;" id="idforeign4likes">0 likes</span>
-      </div>
-      <div>
-      <a href="Alakananda tu, main bhagirathi.html"> <img class="filmposters" src="Images/Film Poster/Foreign Films/Alakananda tu, main bhagirathi.png" width="200" height="150"></a>
-      <i id="foreign6" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-      <span style="float: right;" id="idforeign4likes">0 likes</span>
-    </div>
-      <div>
-        <a href="Kuzolunga.html"> <img class="filmposters" src="Images/Film Poster/Foreign Films/Kuzolunga.png"
-            width="200" height="150"></a>
-        <i id="foreign7" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-        <span style="float: right;" id="idforeign4likes">0 likes</span>
+        <i id="foreign6" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="idforeign6likes">0 likes</span>
       </div>
       <div>
         <a href="Fever.html"> <img class="filmposters" src="Images/Film Poster/Foreign Films/Fever.png" width="200"
             height="150"></a>
-        <i id="foreign8" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-        <span style="float: right;" id="idforeign4likes">0 likes</span>
+        <i id="foreign7" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="idforeign7likes">0 likes</span>
       </div>
-       <div>
-        <a href="Lost in Concrete Woods.html"> <img class="filmposters" src="Images/Film Poster/Foreign Films/Lost in Concrete Woods.png" width="200"
-            height="150"></a>
+      <div>
+        <a href="Kuzolunga.html"> <img class="filmposters" src="Images/Film Poster/Foreign Films/Kuzolunga.png"
+            width="200" height="150"></a>
         <i id="foreign8" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-        <span style="float: right;" id="idforeign4likes">0 likes</span>
+        <span style="float: right;" id="idforeign8likes">0 likes</span>
+      </div>
+      <div>
+        <a href="Lost in Concrete Woods.html"> <img class="filmposters"
+            src="Images/Film Poster/Foreign Films/Lost in Concrete Woods.png" width="200" height="150"></a>
+        <i id="foreign9" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="idforeign9likes">0 likes</span>
       </div>
     </div>
 

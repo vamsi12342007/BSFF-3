@@ -61,7 +61,8 @@
   app = initializeApp(firebaseConfig);
   db = getFirestore(app);
   moviesCol = collection(db, 'movies');
-  setUpFns("comedy", 3, getDocs, doc, updateDoc, setDoc);
+  count = 5;
+  setUpFns("comedy", getDocs, doc, updateDoc, setDoc);
 </script>
 
 <body>
@@ -79,12 +80,13 @@
       <nav id="mnav" class="Header1 Nav mobilenav">
         <div class="programicons"><a href="index.html">Home</a></div>
         <div class="programicons"><a href="Film Collection.html">Film Collection</a></div>
-         <div class="programicons"><a href="Selected films.html">2025 Official Selection</a></div>
+        <div class="programicons"><a href="Selected films.html">2025 Official Selection</a></div>
         <div class="programicons"><a href="About.html">About Us</a></div>
         <div class="programicons"><a href="Submit.html">Submit</a></div>
         <div class="programicons"><a href="Contact.html">Contact Us</a></div>
       </nav>
     </div>
+
 
     <div>
       <p class="genresheadlines">Comedy</p>
@@ -97,43 +99,32 @@
         <i id="comedy1" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
         <span style="float: right;" id="idcomedy1likes">0 likes</span>
       </div>
-      
       <div>
         <a href="Facebook Vacation.html"><img class="filmposters" src="Images/Film Poster/Comedy/Facebook Vacation.png"
             width="150" height="350"></a>
         <i id="comedy2" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
         <span style="float: right;" id="idcomedy2likes">0 likes</span>
       </div>
-    
       <div>
         <a href="Booked.html"><img class="filmposters" src="Images/Film Poster/Comedy/Booked.png" width="150"
             height="350"></a>
         <i id="comedy3" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
         <span style="float: right;" id="idcomedy3likes">0 likes</span>
       </div>
-
-      <div>
-        <a href="Artblocked.html"><img class="filmposters" src="Images/Film Poster/Comedy/Artblocked.png" width="150"
-            height="350"></a>
-        <i id="comedy4" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-        <span style="float: right;" id="idcomedy3likes">0 likes</span>
-      </div>
-
       <div>
         <a href="Sticky Business.html"><img class="filmposters" src="Images/Film Poster/Comedy/Sticky Business 2.png"
             width="150" height="350"></a>
-        <i id="comedy5" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-        <span style="float: right;" id="idcomedy3likes">0 likes</span>
+        <i id="comedy4" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="idcomedy4likes">0 likes</span>
       </div>
-
       <div>
-        <a href="Reunited in Yokohama.html"><img class="filmposters" src="Images/Film Poster/Comedy/Reunited in Yokohama.png"
-            width="150" height="350"></a>
-        <i id="comedy6" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-        <span style="float: right;" id="idcomedy3likes">0 likes</span>
+        <a href="Reunited in Yokohama.html"><img class="filmposters"
+            src="Images/Film Poster/Comedy/Reunited in Yokohama - Copy.png" width="150" height="350"></a>
+        <i id="comedy5" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="idcomedy5likes">0 likes</span>
       </div>
+    </div>
 
-         </div>
 
     <footer class="footer">
       <div class="contactContainer">

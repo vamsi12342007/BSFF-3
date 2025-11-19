@@ -15,7 +15,15 @@
   <link href="Stylesheet/stylesheet2.css" rel="stylesheet" type="text/css" />
   <link href="Stylesheet/mobile-fixes.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster" />
-
+  <script src="database.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+    import { getFirestore, doc, getDocs, setDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js';
+    app = initializeApp(firebaseConfig);
+    db = getFirestore(app);
+    setUpFns("horror", getDocs, doc, updateDoc, setDoc, false);
+  </script>
+  <script src="addcomment.js" type="text/javascript"></script>
   <script>
     function toggleMenu() {
       var nav = document.getElementById("mnav");
@@ -33,6 +41,7 @@
           toggleMenu();
         });
       }
+      getCommentsAndLikes();
     });
   </script>
 </head>
@@ -48,11 +57,10 @@
         </button>
       </div>
 
-
       <nav id="mnav" class="Header1 Nav mobilenav">
         <div class="programicons"><a href="index.html">Home</a></div>
         <div class="programicons"><a href="Film Collection.html">Film Collection</a></div>
-         <div class="programicons"><a href="Selected films.html">2025 Official Selection</a></div>
+        <div class="programicons"><a href="Selected films.html">2025 Official Selection</a></div>
         <div class="programicons"><a href="About.html">About Us</a></div>
         <div class="programicons"><a href="Submit.html">Submit</a></div>
         <div class="programicons"><a href="Contact.html">Contact Us</a></div>
@@ -63,20 +71,13 @@
       <p class="filmtitles">To All My Women</p>
     </div>
 
-    <div class="promotionalvideo">
-      <iframe id="SIBIMLfilm" width="420" height="315"
-        src="https://www.youtube.com/embed/aDhEAmuljB0?si=PDiTwN15w_6cPIBs"></iframe>
-      </iframe>
-    </div>
-
     <div class="pagecontainer">
       <div class="postercontainer">
         <div>
-          <img id="wolvesmovieposters" src="Images/Film Poster/Foreign Films/To All My Woman.png" width="450"
-            height="250">
+          <img class="movieposters" src="Images/Film Poster/Foreign Films/To All My Women.png" width="400" height="900">
         </div>
 
-        <div id="creditscontainer">
+        <div class="countrycontainer">
           <p class="countrytitle">Country</p>
           <p class="countryname"><span style="color:red">Poland</span></p>
 
@@ -90,10 +91,10 @@
           <p class="countryname"><span style="color:red">Pan Gangowski</span></p>
 
           <p class="countrytitle">Run-time</p>
-          <p class="countryname"><span style="color:red">4:48 mins</span></p>
+          <p class="countryname"><span style="color:red">11:00 mins</span></p>
         </div>
 
-        <div id="creditscontainer">
+        <div class="creditscontainer">
           <p class="countrytitle">Writers</p>
           <p class="countryname"><span style="color:red">Pan Gangowski</span></p>
 
@@ -102,17 +103,32 @@
 
           <p class="countrytitle">Editor</p>
           <p class="countryname"><span style="color:red">Pan Gangowski</span></p>
-
         </div>
       </div>
     </div>
 
-    <div id="wolvessynopsiscontainer">
+    <div class="synopsiscontainer">
       <h4 class="synopsisheader">Synopsis</h4>
       <p id="whatsynopsis">Julka, young and radiant, finds strength in the women who never leave her side.</p>
     </div>
 
-    
+    <div class="promotionalvideo">
+      <iframe id="SIBIMLfilm" width="420" height="315"
+        src="https://www.youtube.com/embed/aDhEAmuljB0?si=PDiTwN15w_6cPIBs"></iframe>
+      </iframe>
+    </div>
+
+    <div class="commentsareawrapper">
+      <div class="likesFeatureWrapper">
+        <i onclick="handlelikebutton(event)" id="horror4" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="horror4likes">0 likes</span>
+      </div>
+      <comment-component class="addCommentsForm" id="horror4comment"></comment-component>
+      <div class="commentsSection">
+        <h4 class="marginlessP"><span onclick="toggleComments()" class="commentsExpander">Show Comments</span></h4>
+        <div id="commentsContainer" style="display: none;"></div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="contactContainer">
         <!--          <img-->
@@ -150,3 +166,41 @@
     </footer>
   </div>
 </body>
+
+ <footer class="footer">
+      <div class="contactContainer">
+        <!--          <img-->
+        <!--            class="footericons"-->
+        <!--            src="Images/Nav Icons/Email Icon.png"-->
+        <!--            alt="email icon"-->
+        <!--            width="40"-->
+        <!--            height="30"-->
+        <!--          />-->
+        <p>bramptonshortfilmfest@gmail.com</p>
+      </div>
+      <div class="contactContainer">
+        <!--          <img-->
+        <!--            class="footericons"-->
+        <!--            src="Images/Nav Icons/telephone_1104586.png"-->
+        <!--            alt="telephone icon"-->
+        <!--            width="40"-->
+        <!--            height="30"-->
+        <!--          />-->
+      </div>
+      <div class="contactContainer">
+        <!--          <img-->
+        <!--            class="footericons"-->
+        <!--            src="Images/Nav Icons/world-wide-web.png"-->
+        <!--            alt="web icon"-->
+        <!--            width="40"-->
+        <!--            height="30"-->
+        <!--          />-->
+        <p>bramptonshortfilm-fest.com</p>
+      </div>
+      <i>
+        <p>Short in Length, Long in Impact.</p>
+      </i>
+      <p>&copy; 2025 Brampton Film-Fest (Official Site)</p>
+    </footer>
+    </body>
+

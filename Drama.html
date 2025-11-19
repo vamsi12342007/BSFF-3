@@ -17,58 +17,60 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
 
-    <!-- Add the Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
-  <script>
-    function toggleMenu() {
-      var nav = document.getElementById("mnav");
-      nav.classList.toggle("expanded");
-      console.log("Menu toggled");
+<!-- Add the Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById("mnav");
+    nav.classList.toggle("expanded");
+    console.log("Menu toggled");
+  }
+
+  // Ensure the script runs after the page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("Page loaded");
+    var hamburger = document.querySelector(".hamburger");
+    if (hamburger) {
+      hamburger.addEventListener("click", function (e) {
+        e.preventDefault();
+        toggleMenu();
+      });
     }
+  });
+</script>
 
-    // Ensure the script runs after the page loads
-    document.addEventListener("DOMContentLoaded", function () {
-      console.log("Page loaded");
-      var hamburger = document.querySelector(".hamburger");
-      if (hamburger) {
-        hamburger.addEventListener("click", function (e) {
-          e.preventDefault();
-          toggleMenu();
-        });
-      }
-    });
-  </script>
-
-  <style>
-    img {
-      border-radius: 50px;
+<style>
+  img {
+    border-radius: 50px;
 
 
-    }
+  }
 
-    .genres {
-      display: flex;
-      justify-content: space-around;
-      width: 200px;
-      position: relative;
-      left: 500px;
-    }
-  </style>
+  .genres {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    position: relative;
+    left: 500px;
+  }
+</style>
 </head>
-    <script src="database.js"></script>
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-      import { getFirestore, doc, updateDoc, setDoc, collection, getDocs } from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js';
-      // Initialize Firebase
-      app = initializeApp(firebaseConfig);
-      db = getFirestore(app);
-      moviesCol = collection(db, 'movies');
-      setUpFns("drama", 10, getDocs, doc, updateDoc, setDoc);
-    </script>
+<script src="database.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+  import { getFirestore, doc, updateDoc, setDoc, collection, getDocs } from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js';
+  // Initialize Firebase
+  app = initializeApp(firebaseConfig);
+  db = getFirestore(app);
+  moviesCol = collection(db, 'movies');
+  count = 11;
+  setUpFns("drama", getDocs, doc, updateDoc, setDoc);
+</script>
+
 <body>
   <div class="indexContainer">
     <div class="Header1 mobileView">
@@ -90,6 +92,7 @@
         <div class="programicons"><a href="Contact.html">Contact Us</a></div>
       </nav>
     </div>
+
 
     <div>
       <p class="genresheadlines">Drama</p>
@@ -113,7 +116,7 @@
       <div>
         <a href="The Flower at the end of the world.html">
           <img class="filmposters" src="Images/Film Poster/Drama/The Flower at the end of the world.png"
-          alt="The Flower at the End of the World">
+            alt="The Flower at the End of the World">
         </a>
         <i id="drama3" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
         <span style="float: right;" id="iddrama3likes">0 likes</span>
@@ -160,29 +163,22 @@
         <i id="drama9" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
         <span style="float: right;" id="iddrama9likes">0 likes</span>
       </div>
-       <div>
+      <div>
         <a href="IF CONSEQUENCE BUT DO APPROVE MY DREAM.html">
-          <img class="filmposters" src="Images/Film Poster/Drama/IF CONSEQUENCE BUT DO APPROVE MY DREAM....png" alt="Annoying Sounds">
+          <img class="filmposters" src="Images/Film Poster/Drama/IF CONSEQUENCE BUT DO APPROVE MY DREAM....png"
+            alt="Annoying Sounds">
         </a>
         <i id="drama10" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
         <span style="float: right;" id="iddrama10likes">0 likes</span>
       </div>
-
-        <div>
-          <a href="Before They Forget.html">
-            <img class="filmposters" src="Images/Film Poster/Drama/Before They Forget.png" alt="Annoying Sounds">
-          </a>
-          <i id="drama11" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-          <span style="float: right;" id="iddrama10likes">0 likes</span>
-        </div>
-
-             <div>
-          <a href="The Taste of Greed.html">
-            <img class="filmposters" src="Images/Film Poster/Drama/The Taste of Greed.png" alt="Annoying Sounds">
-          </a>
-          <i id="drama12" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-          <span style="float: right;" id="iddrama10likes">0 likes</span>
-        </div>
+         <div>
+        <a href="Before They Forget.html">
+          <img class="filmposters" src="Images/Film Poster/Drama/Before They Forget.png"
+            alt="Annoying Sounds">
+        </a>
+        <i id="drama11" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="iddrama11likes">0 likes</span>
+      </div>
     </div>
 
 

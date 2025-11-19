@@ -61,7 +61,8 @@
   app = initializeApp(firebaseConfig);
   db = getFirestore(app);
   moviesCol = collection(db, 'movies');
-  setUpFns("student", 5, getDocs, doc, updateDoc, setDoc);
+  count = 10
+  setUpFns("student", getDocs, doc, updateDoc, setDoc);
 </script>
 <body>
   <div class="indexContainer">
@@ -75,8 +76,7 @@
       </div>
 
 
-
-      <nav id="mnav" class="Header1 Nav mobilenav">
+     <nav id="mnav" class="Header1 Nav mobilenav">
         <div class="programicons"><a href="index.html">Home</a></div>
         <div class="programicons"><a href="Film Collection.html">Film Collection</a></div>
          <div class="programicons"><a href="Selected films.html">2025 Official Selection</a></div>
@@ -116,30 +116,30 @@
           <i id="student5" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
           <span style="float: right;" id="idstudent5likes">0 likes</span>
         </div>
-         <div>
-          <a href="Inspiration in White.html"><img class="filmposters" src="Images/Film Poster/Student Films/Inspiration in White.png" width="150" height="350"></a>
-          <i id="student6" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-          <span style="float: right;" id="idstudent5likes">0 likes</span>
-        </div>
-         <div>
-          <a href="Where the water meets the sand.html"><img class="filmposters" src="Images/Film Poster/Student Films/Where The Water meets the Sand.png" width="150" height="350"></a>
-          <i id="student7" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-          <span style="float: right;" id="idstudent5likes">0 likes</span>
-        </div>
-         <div>
-          <a href="Cuddle Buddies.html"><img class="filmposters" src="Images/Film Poster/Student Films/Cuddle Buddies.png" width="150" height="350"></a>
-          <i id="student8" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-          <span style="float: right;" id="idstudent5likes">0 likes</span>
-        </div>
-        <div>
+          <div>
           <a href="The Orient.html"><img class="filmposters" src="Images/Film Poster/Student Films/The Orient.png" width="150" height="350"></a>
-          <i id="student8" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-          <span style="float: right;" id="idstudent5likes">0 likes</span>
+          <i id="student6" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+          <span style="float: right;" id="idstudent6likes">0 likes</span>
         </div>
-        <div>
-          <a href="Something Called Sonder.html"><img class="filmposters" src="Images/Film Poster/Student Films/Something Called Sonder.png" width="150" height="350"></a>
+          <div>
+          <a href="Where The Water meets the sand.html"><img class="filmposters" src="Images/Film Poster/Student Films/Where The Water meets the Sand.png" width="150" height="350"></a>
+          <i id="student7" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+          <span style="float: right;" id="idstudent7likes">0 likes</span>
+        </div>
+          <div>
+          <a href="Something called Sonder.html"><img class="filmposters" src="Images/Film Poster/Student Films/Something Called Sonder.png" width="150" height="350"></a>
           <i id="student8" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-          <span style="float: right;" id="idstudent5likes">0 likes</span>
+          <span style="float: right;" id="idstudent8likes">0 likes</span>
+        </div>
+          <div>
+          <a href="Inspiration in White.html"><img class="filmposters" src="Images/Film Poster/Student Films/Inspiration in White.png" width="150" height="350"></a>
+          <i id="student9" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+          <span style="float: right;" id="idstudent9likes">0 likes</span>
+        </div>
+          <div>
+          <a href="Cuddle Buddies.html"><img class="filmposters" src="Images/Film Poster/Student Films/Cuddle Buddies.png" width="150" height="350"></a>
+          <i id="student10" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+          <span style="float: right;" id="idstudent10likes">0 likes</span>
         </div>
   </div>
     

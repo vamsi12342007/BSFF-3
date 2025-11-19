@@ -61,8 +61,10 @@
   app = initializeApp(firebaseConfig);
   db = getFirestore(app);
   moviesCol = collection(db, 'movies');
-  setUpFns("documentary", 3, getDocs, doc, updateDoc, setDoc);
+  count = 7;
+  setUpFns("documentary", getDocs, doc, updateDoc, setDoc);
 </script>
+
 <body>
   <div class="indexContainer">
     <div class="Header1 mobileView">
@@ -75,7 +77,7 @@
       </div>
 
 
-      <nav id="mnav" class="Header1 Nav mobilenav">
+     <nav id="mnav" class="Header1 Nav mobilenav">
         <div class="programicons"><a href="index.html">Home</a></div>
         <div class="programicons"><a href="Film Collection.html">Film Collection</a></div>
          <div class="programicons"><a href="Selected films.html">2025 Official Selection</a></div>
@@ -84,54 +86,56 @@
         <div class="programicons"><a href="Contact.html">Contact Us</a></div>
       </nav>
     </div>
+
     <div>
       <p class="genresheadlines">Documentary</p>
     </div>
 
-   <div class="filmpostercontainer">
-    <div>
-      <a href="Arms Spread Out.html"><img class="filmposters" src="Images/Film Poster/Documentary/Arms Spread Out.png" width="150" height="350"></a>
-      <i id="documentary1" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-      <span style="float: right;" id="iddocumentary1likes">0 likes</span>
-    </div>
-    <div>
-      <a href="The Ramp to Nowhere.html"><img class="filmposters" src="Images/Film Poster/Documentary/The Ramp to Nowhere.png" width="150" height="350"></a>
-      <i id="documentary2" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-      <span style="float: right;" id="iddocumentary2likes">0 likes</span>
-    </div>
-    <div>
-      <a href="F.html"><img class="filmposters" src="Images/Film Poster/Documentary/F.png" width="150" height="350"></a>
-      <i id="documentary3" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-      <span style="float: right;" id="iddocumentary3likes">0 likes</span>
+    <div class="filmpostercontainer">
+      <div>
+        <a href="Arms Spread Out.html"><img class="filmposters" src="Images/Film Poster/Documentary/Arms Spread Out.png"
+            width="150" height="350"></a>
+        <i id="documentary1" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="iddocumentary1likes">0 likes</span>
+      </div>
+      <div>
+        <a href="The Ramp to Nowhere.html"><img class="filmposters"
+            src="Images/Film Poster/Documentary/The Ramp to Nowhere.png" width="150" height="350"></a>
+        <i id="documentary2" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="iddocumentary2likes">0 likes</span>
+      </div>
+      <div>
+        <a href="F.html"><img class="filmposters" src="Images/Film Poster/Documentary/F.png" width="150"
+            height="350"></a>
+        <i id="documentary3" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="iddocumentary3likes">0 likes</span>
+      </div>
+      <div>
+        <a href="It's OK to Talk.html"><img class="filmposters"
+            src="Images/Film Poster/Documentary/It's Okay to Talk.png" width="150" height="350"></a>
+        <i id="documentary4" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="iddocumentary4likes">0 likes</span>
+      </div>
+      <div>
+        <a href="Motherland.html"><img class="filmposters" src="Images/Film Poster/Documentary/Motherland.png"
+            width="150" height="350"></a>
+        <i id="documentary5" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="iddocumentary5likes">0 likes</span>
+      </div>
+      <div>
+        <a href="Numb.html"><img class="filmposters" src="Images/Film Poster/Documentary/Numb.png" width="150"
+            height="350"></a>
+        <i id="documentary6" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="iddocumentary6likes">0 likes</span>
+      </div>
+          <div>
+        <a href="Revival.html"><img class="filmposters" src="Images/Film Poster/Documentary/Revival 2.png" width="150"
+            height="350"></a>
+        <i id="documentary7" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
+        <span style="float: right;" id="iddocumentary7likes">0 likes</span>
+      </div>
     </div>
 
-    <div>
-      <a href="It's OK to Talk.html"><img class="filmposters" src="Images/Film Poster/Documentary/It's Okay to Talk.png" width="150" height="350"></a>
-      <i id="documentary4" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-      <span style="float: right;" id="iddocumentary3likes">0 likes</span>
-    </div>
-
-    <div>
-      <a href="Motherland.html"><img class="filmposters" src="Images/Film Poster/Documentary/Motherland.png" width="150" height="350"></a>
-      <i id="documentary5" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-      <span style="float: right;" id="iddocumentary3likes">0 likes</span>
-    </div>
-
-    <div>
-      <a href="Numb.html"><img class="filmposters" src="Images/Film Poster/Documentary/Numb.png" width="150" height="350"></a>
-      <i id="documentary6" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-      <span style="float: right;" id="iddocumentary3likes">0 likes</span>
-    </div>
-
-     <div>
-      <a href="Revival.html"><img class="filmposters" src="Images/Film Poster/Documentary/Revival 2.png" width="150" height="350"></a>
-      <i id="documentary7" class="fa fa-thumbs-up" style="font-size:24px;color:blue"></i>
-      <span style="float: right;" id="iddocumentary3likes">0 likes</span>
-    </div>
-
-
-   </div>
-    
     <footer class="footer">
       <div class="contactContainer">
         <!--          <img-->
